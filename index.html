@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries Supermart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+     rel="stylesheet">
+     <script src="groceries supermart script.js" defer></script>
+    <link rel="stylesheet" href="groceries supermart.css">
+    <link rel="stylesheet" href="groceries supermart responsive.css">
+    
+    
+    
+    
+</head>
+<body>
+  <header>
+    <div class="top-header">
+        <div class="left">
+            <p><img src="Groceries Supermart Website/Vector V.png" alt="phone"> +91 87642 987687</p>
+            <p><img src="Groceries Supermart Website/Vector 1.png" alt="whatsapp"> +91 87642 987687</p>
+        </div>
+        <div class="center">
+            World Fastest online Shopping Destination
+        </div>
+        <div class="right">
+      
+          <span>Current Location</span>
+          <img id="locationBtn" src="Groceries Supermart Website/Vector.png" alt="Arrow">
+        
+          <span>Account</span>
+          <img id="accountBtn"  src="Groceries Supermart Website/Vector.png" alt="Arrow">
+          <div id="loginBtn"  class="loginbox">
+           <img  src="Groceries Supermart Website/SVG.png" alt="user">
+           <span>Login/Logout</span>
+          </div>
+        </div>
+      </div>
+
+
+<!-- account Overlay Box -->
+<div id="accountOverlay" class="account-overlay">
+  <div class="account-popup" id="accountContent">
+    <span class="close-btn" onclick="closeAccountOverlay()"><img src="Groceries Supermart Website/x.png"></span>
+
+    <button class="signout-btn">Sign Out</button>
+
+    <p><strong>New Customer ? <span class="start-here">Start Here</span></strong></p>
+
+    <p><strong>Your Account</strong></p>
+    <ul>
+      <li>Your Account</li>
+      <li>Your Orders</li>
+      <li>Your Wish List</li>
+      <li>Your Subscribe & Save Items</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- location Overlay -->
+<div id="locationOverlay">
+  <div class="location-popup" id="locationContent">
+    <span class="close-btn" onclick="closeOverlay()"><img src="Groceries Supermart Website/x.png"></span>
+    <h2>Choose your Location</h2>
+    <p>Select a delivery location to see product availability and delivery options</p>
+
+    <button class="change-address">Change Your Address</button>
+
+    <div class="separator">
+      <hr><span>Or enter an Indian pincode</span><hr>
+    </div>
+
+    <div class="pin-form">
+      <input type="texts" placeholder="XXXXX">
+      <button class="apply-btn">Apply</button>
+    </div>
+  </div>
+</div>
+
+    <!--login overlay-->
+<div id="loginOverlay" class="overlay" style="display: none;">
+  <div class="overlay-content" id="overlayContent">
+    <img src="Groceries Supermart Website/Screenshot_2025-03-29_160452-removebg-preview 1.png" alt="Login Visual" />
+    <h2>Login</h2>
+    <p>Enter Your Phone Number to proceed</p>
+    <div class="input-box">
+      <span><img src="Groceries Supermart Website/Vector V.png"></span>
+    <span>  <input type="tel" placeholder="Enter 10 digit phone number"></span>
+    </div>
+    <button class="continue-btn">Continue</button>
+    <p class="terms">By clicking, I accept Terms & Conditions.</p>
+  </div>
+</div>
+      
+
+      <!-- Main Header -->
+      <div class="main-header">
+        <div class="logo">
+          <img src="Groceries Supermart Website/Ellipse 1.png" alt="Basket">
+          <h3 style="color:#8BC34A;">GroceryHub</h3>
+        </div>
+        <nav>
+          <a class="nav-link active"  onclick="showSection('home',this)">Home</a>
+          <a class="nav-link" onclick="showSection('categories',this)" >Categories</a>
+          <a class="nav-link" onclick="showSection('deals',this)">Deals</a>
+        </nav>
+        <div class="icons">
+          <div>
+            <span><img src="Groceries Supermart Website/SEARCH.png"></span>
+            <br><small>Search</small></div>
+           <div class="overlay-btn" data-overlay="cartOverlay"><span><img src="Groceries Supermart Website/Vector 8.png"></span><br><small>Cart</small></div>
+          <div class="overlay-btn" data-overlay="cartOverlay"><span><img src="Groceries Supermart Website/Vector O.png"></span><br><small>Liked</small></div>
+        </div>
+      </div>
+    
+
+
+<!--  Cart Overlay -->
+<div id="cartOverlay" class="cart-overlay">
+  <div class="cart-popup" id="cartContent">
+    <span class="close-cart" onclick="closeCartOverlay()"><img src="Groceries Supermart Website/x.png"></span>
+
+    <h1>My Cart</h1>
+    <h2>3 Items</h2>
+    <hr>
+
+    <div class="cart-body">
+    
+      <div class="product-info">
+        <img src="Groceries Supermart Website/SPAR Select Urad Dal 500G.png" alt="SPAR Select Urad Dal">
+        <div>
+          <p>SPAR Select Urad Dal 500G</p>
+          <p><strong>₹110</strong></p>
+          <p>Save For later ❤️</p>
+        </div>
+      </div>
+
+      
+      <div class="bill-details">
+        <p><strong>Bill Details</strong></p>
+        <hr class="liness">
+        <p>Total qty (1) <span>$100</span></p>
+        <p>Handling fee <span>$10</span></p>
+        <hr class="liness">
+        <p><strong>To Pay</strong> <span><strong>$110/-</strong></span></p>
+      </div>
+    </div>
+
+    <!-- Buy Button -->
+    <div class="buy-btn-container">
+      <button class="buy-now-btn">Buy Now</button>
+    </div>
+  
+
+
+<div class="cart-body">
+    
+  <div class="product-info">
+    <img src="Groceries Supermart Website/Jersey Badam Flavoured Milk 190ML.png">
+    <div>
+      <p>Jersey Badam Flavoured Milk 190ML</p>
+      <p><strong>₹40</strong></p>
+      <p>Save For later ❤️</p>
+    </div>
+  </div>
+
+  
+  <div class="bill-details">
+    <p><strong>Bill Details</strong></p>
+    <hr class="liness">
+    <p>Total qty (1) <span>$30</span></p>
+    <p>Handling fee <span>$10</span></p>
+    <hr class="liness">
+    <p><strong>To Pay</strong> <span><strong>$40/-</strong></span></p>
+  </div>
+</div>
+
+<!-- Buy Button -->
+<div class="buy-btn-container">
+  <button class="buy-now-btn">Buy Now</button>
+</div>
+
+
+
+
+
+
+<div class="cart-body">
+    
+  <div class="product-info">
+    <img src="Groceries Supermart Website/Apple Royalgala.png">
+    <div>
+      <p>Apple Royalgala 500G</p>
+      <p><strong>₹114.5</strong></p>
+      <p>Save For later ❤️</p>
+    </div>
+  </div>
+
+  
+  <div class="bill-details">
+    <p><strong>Bill Details</strong></p>
+    <hr class="liness">
+    <p>Total qty (1) <span>$100</span></p>
+    <p>Handling fee <span>$14.5</span></p>
+    <hr class="liness">
+    <p><strong>To Pay</strong> <span><strong>$114.5/-</strong></span></p>
+  </div>
+</div>
+
+<!-- Buy Button -->
+<div class="buy-btn-container">
+  <button class="buy-now-btn">Buy Now</button>
+</div>
+</div>
+</div>
+
+  
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+<section id="home">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="lefts">
+          <h1>Fresh Groceries Delivered<br>To Your DoorStep</h1>
+          <p>Emphasizing the Store's Commitment to providing<br>fresh Produce and Product Daily.</p>
+          <button>Shop Now</button>
+        </div>
+        <div class="rights">
+          <img src="Groceries Supermart Website/image 1.png" alt="Delivery Guy">
+        </div>
+      </div>
+    
+      <div class="onestop"></div>
+    
+
+
+      <div>
+        <div class="section-header">
+          <h2>Grocery & Kitchen</h2>
+          <a href="#">See all &gt;</a>
+        </div>
+        <div class="category-grid">
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Atta,Rice ; Dal.png" alt="Atta">
+            <span>Atta, Rice & Dal</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Group 182.png" alt="Oil">
+            <span>Cooking Oil</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Masala ; Spices H.png" alt="Spices">
+            <span>Masala & Spices</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Chicken, Fish ; Meat U.png" alt="Meat">
+            <span>Chicken, Fish & Meat</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Fruits &; Vegetables U.png" alt="Fruits">
+            <span>Fruits & Vegetables</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Dairy, Bread ; Eggs U.png" alt="Eggs">
+            <span>Dairy, Bread & Eggs</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Dry Fruits I.png" alt="Dry Fruits">
+            <span>Dry Fruits</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Frame 3 O.png" alt="Organic Food">
+            <span>Organic Food</span>
+          </div>
+        </div>
+      
+    
+      <!-- Snacks & Drinks -->
+      
+        <div class="section-header">
+          <h2>Snacks & Drinks</h2>
+          <a href="#">See all &gt;</a>
+        </div>
+        <div class="category-grid">
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Biscuits & Cookies H.png" alt="Cookies">
+            <span>Biscuits & Cookies</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Breakfast Cereals J.png" alt="Cereals">
+            <span>Breakfast Cereals</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Pasta ; Noodles J.png" alt="Noodles">
+            <span>Pasta & Noodles</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Jams Spreads J.png" alt="Jam">
+            <span>Jams & Spreads</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Sweets &; Chocolates J.png" alt="Sweets">
+            <span>Sweets & Chocolates</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Chips & Namkeens.png" alt="Chips">
+            <span>Chips & Namkeens</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Drinks Juices J.png" alt="Juice">
+            <span>Drinks & Juices</span>
+          </div>
+          <div class="category-item">
+            <img src="Groceries Supermart Website/Frame 4 J.png" alt="Coffee">
+            <span>Tea, Coffee & Beverages</span>
+          </div>
+        </div>
+      
+    
+
+      <!--Fish and Meat-->
+      
+      <div class="section-header">
+        <h2>Fish and Meat</h2>
+        
+      </div>
+      <div class="product-container">
+        <div class="product-card" onclick="showSection('premiumchicken')">
+          <img src="Groceries Supermart Website/Premium Chicken Whole Skinless 1.png" alt="chicken">
+          <div class="product-name">Premium Chicken Whole Skinless</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹74.75</span>
+          <span class="product-options">4 Options</span>
+          </div>
+        </div>
+    
+        <div class="product-card" onclick="showSection('chickenboneless')">
+          <img src="Groceries Supermart Website/Chicken Boneless Breast Fillet.png" alt="boneless">
+          <div class="product-name">Chicken Boneless Breast Fillet</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹107.25</span>
+          <span class="product-options">4 Options</span>
+          </div>
+        </div>
+    
+        <div class="product-card" onclick="showSection('goatcurry')">
+          <img src="Groceries Supermart Website/Goat Currycut.png" alt="goatcurry">
+          <div class="product-name">Goat Currycut</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹212.25</span>
+          <span class="product-options">4 Options</span>
+        </div>
+        </div>
+
+
+    
+        <div class="product-card">
+          <img src="Groceries Supermart Website/Chicken Liver Cut Pieces U.png" alt="liver">
+          <div class="product-name">Chicken Liver Cut Pieces</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹249.75</span>
+          <span class="product-options">4 Options</span>
+        </div>
+        </div>
+    
+
+        <div class="product-card">
+          <img src="Groceries Supermart Website/Chicken Boneless Breast Fillet.png" alt="chicken">
+          <div class="product-name">Chicken Dressed With Skin Whole</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹59.75</span>
+          <span class="product-options">4 Options</span>
+          </div>
+        </div>
+    
+        <div class="product-card">
+          <img src="Groceries Supermart Website/Premium Chicken Drumstick Skinless U.png" alt="skinless">
+          <div class="product-name">Premium Chicken Drumstick Skinless</div>
+          <div class="product-weight">250 GM</div>
+          <div class="align">
+          <span class="product-price">₹107.25</span>
+          <span class="product-options">4 Options</span>
+          </div>
+        </div>
+      </div>
+    
+
+<!--Dairy,Bread and eggs-->
+      <div class="section-header">
+        <h2>Dairy,Bread and Eggs</h2>
+        
+      </div>
+      <div class="product-container">
+        <div class="product-card">
+          <img class="imgalign"   src="Groceries Supermart Website/Jersey Badam Flavoured Milk 190ML.png" alt="jersey">
+          <div class="product-name">Jersey Badam Flavoured Milk 190ML</div>
+          <div class="product-weight">190 ML</div>
+          <div class="align">
+          <span class="product-price">₹40</span>
+          <span class="product-option">+</span>
+          </div>
+        </div>
+
+
+          <div class="product-card" onclick="showSection('milk')">
+            <div class="offer-tag">3% Off</div>
+            <img class="imgalign" src="Groceries Supermart Website/Nandini Goodlife Milk 500GM.png" alt="milk">
+            <div class="product-name">Nandini Goodlife Milk 500GM </div>
+            <div class="product-weight">500 GM</div>
+            <div class="delete"><del>₹30</del></div>
+            <div class="align">
+            <span class="product-price">₹29</span>
+            <span class="product-option">+</span>
+            </div>
+          </div>
+
+
+
+            <div class="product-card">
+              <img src="Groceries Supermart Website/Nandini Goodlife Milk 180ML.png" alt="milk">
+              <div class="product-name">Nandini Good Life Milk 180ML</div>
+              <div class="product-weight">180 ML</div>
+              <div class="align">
+              <span class="product-price">₹14</span>
+              <span class="product-option">+</span>
+              </div>
+            </div>
+
+
+              <div class="product-card">
+                <img src="Groceries Supermart Website/Nandini Slim Uht Milk 1L.png" alt="milk">
+                <div class="product-name">Nandini Slim Uht Milk 1L </div>
+                <div class="product-weight">1 L</div>
+                <div class="align">
+                <span class="product-price">₹71</span>
+                <span class="product-option">+</span>
+                </div>
+              </div>
+
+
+
+                <div class="product-card" onclick="showSection('paneer')">
+                  <img src="Groceries Supermart Website/Milky Mist Paneer-P.png" alt="paneer">
+                  <div class="product-name">Milky Mist Paneer</div>
+                  <div class="product-weight">200 GM</div>
+                  <div class="align">
+                  <span class="product-price">₹128</span>
+                  <span class="product-options">2 0ptions</span>
+                  </div>
+                </div>
+
+
+
+                  <div class="product-card">
+                    <img src="Groceries Supermart Website/Heritage Premium Badam Milk With Badam Bits 180ML.png" alt="badam">
+                    <div class="product-name">Heritage Premium Badam Milk with Bada</div>
+                    <div class="product-weight">180 ML</div>
+                    <div class="align">
+                    <span class="product-price">₹35</span>
+                    <span class="product-option">+</span>
+                    </div>
+                  </div>
+
+
+
+        </div>
+
+        <div class="section-header">
+          <h2>Buy More,Save More</h2>
+          
+        </div>
+        <div class="product-container">
+          <div class="product-carded" onclick="showSection('uraddal')">
+            <img class="imgalign"   src="Groceries Supermart Website/SPAR Select Urad Dal 500G.png" alt="dal">
+            <div class="product-name">SPAR select Urad Dal 500G</div>
+            <div class="product-weight">500 GM</div>
+            <div class="align">
+            <span class="product-price">₹110</span>
+            <span class="product-option">+</span>
+            </div>
+          </div>
+            <div class="product-carded" onclick="showSection('fried')">
+              <img class="imgalign" src="Groceries Supermart Website/Bhagyalakshmi Fried Gram-P.png" alt=fried>
+              <div class="product-name">Bhagyalakshmi Fried Gram </div>
+              <div class="product-weight">250 GM</div>
+              
+              <div class="align">
+              <span class="product-price">₹29</span>
+              <span class="product-options">2 options</span>
+              </div>
+            </div>
+              <div class="product-carded" onclick="showSection('moong')">
+                <img src="Groceries Supermart Website/Screenshot_2025-03-31_150052-removebg-preview 1.png" alt="Moong">
+                <div class="product-name">Popular Moong Dal</div>
+                <div class="product-weight">1KG</div>
+                <div class="delete"><del>₹190</del></div>
+                <div class="align">
+                <span class="product-price">₹159</span>
+                <span class="product-option">+</span>
+                </div>
+              </div>
+                <div class="product-carded">
+                  <img src="Groceries Supermart Website/Screenshot_2025-03-31_150157-removebg-preview 1.png">
+                  <div class="product-name">SPAR select spotted double beans</div>
+                  <div class="product-weight">200 GM</div>
+                  <div class="align">
+                  <span class="product-price">₹150</span>
+                  <span class="product-options">2 options</span>
+                  </div>
+                </div>
+                  <div class="product-carded">
+                    <img src="Groceries Supermart Website/Loose Bestprice Fried Gram.png" alt="fried">
+                    <div class="product-name">Loose Bestprice Fried Gram</div>
+                    <div class="product-weight">250 GM</div>
+                    <div class="align">
+                    <span class="product-price">₹42.25</span>
+                    <span class="product-options">3 0ptions</span>
+                    </div>
+                  </div>
+                    <div class="product-carded">
+                       <div class="offer-tag">14%off</div>
+                      <img src="Groceries Supermart Website/Popular Moong Dal 2KG.png" alt="dal">
+                      <div class="product-name">Popular Moong Dal 2KG</div>
+                      <div class="product-weight">2 KG</div>
+                      <div class="delete"><del>₹299</del></div>
+                      <div class="align">
+                      <span class="product-price">₹258</span>
+                      <span class="product-option">+</span>
+                      </div>
+                    </div>
+          </div>
+
+
+
+          <div class="onestop"></div>
+<!--explore categories-->
+          <div class="section-header">
+            <h2>Explore Categories</h2>
+            
+          </div>
+          <div class="product-container">
+            <div class="product-card" onclick="showSection('appleroyal')">
+              <img class="imgalign"   src="Groceries Supermart Website/Apple Royalgala.png" alt="apple">
+              <div class="product-name">Apple Royalgala</div>
+              <div class="product-weight">500 GM </div>
+              <div class="align">
+              <span class="product-price">₹124.5</span>
+              <span class="product-option">+</span>
+              </div>
+            </div>
+    
+    
+              <div class="product-card" onclick="showSection('appleshimla')">
+                <img class="imgalign" src="Groceries Supermart Website/Apple Shimla.png" alt="apple">
+                <div class="product-name">Apple Shimla </div>
+                <div class="product-weight">500 GM</div>
+                
+                <div class="align">
+                <span class="product-price">₹114.5</span>
+                <span class="product-option">+</span>
+                </div>
+              </div>
+    
+    
+    
+                <div class="product-card" onclick="showSection('banana')">
+                  <img src="Groceries Supermart Website/Banana Robusta.png" alt="Banana">
+                  <div class="product-name">Banana Robusta</div>
+                  <div class="product-weight">500 GM</div>
+                  <div class="align">
+                  <span class="product-price">₹27.5</span>
+                  <span class="product-option">+</span>
+                  </div>
+                </div>
+    
+    
+                  <div class="product-card">
+                    <img src="Groceries Supermart Website/Banana Yelakki.png" alt="banana">
+                    <div class="product-name">Banana Yelakki</div>
+                    <div class="product-weight">500 GM</div>
+                    <div class="align">
+                    <span class="product-price">₹62.5</span>
+                    <span class="product-option">+</span>
+                    </div>
+                  </div>
+    
+    
+    
+                    <div class="product-card">
+                      <img src="Groceries Supermart Website/Orange Nagpur.png" alt="orange">
+                      <div class="product-name">Orange Nagpur</div>
+                      <div class="product-weight">500 GM</div>
+                      <div class="align">
+                      <span class="product-price">₹59.5</span>
+                      <span class="product-option">+</span>
+                      </div>
+                    </div>
+    
+    
+    
+                      <div class="product-card">
+                        <img src="Groceries Supermart Website/Guava Prepack.png" alt="Guava">
+                        <div class="product-name">Guava Prepack</div>
+                        <div class="product-weight">300 GM</div>
+                        <div class="align">
+                        <span class="product-price">₹38.7</span>
+                        <span class="product-option">+</span>
+                        </div>
+                      </div>
+    </div>
+
+<div class="testimonalheader">
+            <h2>What Our Beloved Customer Say About Us</h2>
+</div>
+            <div class="testimonials">
+              <div class="testimonial">
+                <div class="quote"><img src="Groceries Supermart Website/Symbol.png" alt="symbol"></div>
+                <div class="stars"><img src="Groceries Supermart Website/Group 176.png" alt="star"></div>
+                <p class="message">
+                  "I've been shopping at this store for years and I'm always impressed with the quality of their produce and meats. The staff is friendly and helpful too!"
+                </p>
+                <div class="customer">
+                  <img src="Groceries Supermart Website/G.png" alt="Astha Kohli">
+                  <span class="customer-name">Astha Kohli</span>
+                </div>
+              </div>
+          
+              <div class="testimonial">
+                <div class="quote"><img src="Groceries Supermart Website/Symbol.png" alt="symbol"></div>
+                <div class="stars"><img src="Groceries Supermart Website/Group 250.png" alt="star"></div>
+                <p class="message">
+                  "I love the variety of products they carry, especially the organic and gluten-free options. The prices are reasonable too!"
+                </p>
+                <div class="customer">
+                  <img src="Groceries Supermart Website/Ellipse 2 H.png" alt="Neeraj Singh">
+                  <span class="customer-name">Neeraj Singh</span>
+                </div>
+              </div>
+            </div>
+          
+
+
+
+
+        </section>
+        
+        
+
+<section id="premiumchicken">
+        <div class="container">
+          <!-- Left Side -->
+          <div class="left-column">
+            <h3>Premium Chicken Whole Skinless</h3>
+        
+            <h6>Product Description</h6>
+            <p>
+              Indulge in the tender and juicy taste of our Premium Chicken Whole Skinless.
+              Our chicken is sourced from trusted farms and processed with utmost care to 
+              ensure a delicious and healthy eating experience.
+              With no added hormones or antibiotics, our chicken is perfect for grilling,
+               roasting, or cooking your favorite chicken recipes.
+            </p>
+        
+            <h6>Key Features</h6>
+            <ul>
+              <li>- Tender and juicy: Carefully selected and processed for tenderness.</li>
+              <li>- No added hormones or antibiotics: Healthier eating experience.</li>
+              <li>- Skinless: Leaner protein source.</li>
+              <li>- Perfect for grilling, roasting, or cooking: Versatile for recipes.</li>
+            </ul>
+        
+            <h6>Product Details</h6>
+            <ul>
+              <li>- Weight: 1.5 kg - 2 kg</li>
+              <li>- Packaging: Vacuum-packed to ensure freshness</li>
+              <li>- Shelf Life: 2-3 days from delivery date</li>
+            </ul>
+          </div>
+        
+          <!-- Right Side -->
+          <div class="right-column">
+            <img src="Groceries Supermart Website/Premium Chicken Whole Skinless 1.png" 
+            alt="Product" class="product-image">
+        
+            <h1>Premium Chicken Whole Skinless 
+              <span style="font-size:18px; color: #595959;;">250 GM</span>
+            </h1>
+            <div class="price">₹74.75</div>
+        
+            <div class="meta">
+              <span>Quality No: <strong>1</strong></span>
+              <span class="stock">❤️ In Stock: <strong>13</strong></span>
+            </div>
+        
+            <div class="buttons">
+              <button class="add-btn">Add to Cart</button>
+              
+            <button  class="buy-btn" onclick="showSection('buynow')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+  </section>
+
+<section id="buynow">
+
+
+  
+  <h2 class="centeralignment"> Secured CheckUp</h2>
+
+  <div class="container">
+    <!-- Left Side -->
+    <div class="leftalign">
+      <img src="Groceries Supermart Website/Jersey Badam Flavoured Milk 190ML.png" alt="Badam Milk">
+      <div class="product-named">Jersey Badam Flavoured Milk 190ML</div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="rightalign">
+      <h4>Product Description :</h4>
+      <p>
+        Indulge in the rich and creamy taste of Badamgir Badam Drink, made with high-quality almonds and natural ingredients.
+        This delicious drink is perfect for those looking for a healthy and refreshing beverage.
+      </p>
+
+      <h4>Key Features</h4>
+      <ul>
+        <li>- Made with high-quality almonds and natural ingredients</li>
+        <li>- Rich in nutrients and protein</li>
+        <li>- Delicious and creamy taste</li>
+        <li>- Perfect for a healthy and refreshing drink</li>
+      </ul>
+
+      <h4>Product Details</h4>
+      <ul>
+        <li>- Product Name: Badamgir Badam Drink</li>
+        <li>- Quantity: 190ml</li>
+        <li>- Ingredients: Almonds, Milk, Sugar, Saffron, Cardamom</li>
+        <li>- Shelf Life: 6 months from manufacturing date</li>
+      </ul>
+
+      <div class="meta">
+        <span>Quality No : 1</span>
+        <span class="stock">❤️ In Stock : 13</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="payment-head">
+    <h2>PAYMENT OPTIONS</h2>
+  </div>
+  <div class="payment-section">
+ <div class="box cost-box">
+      <div class="total">
+        <h2>Total Cost</h2>
+        <p class="price">$289/-</p>
+      </div>
+      <p class="session-info">Session free for 30 minutes</p>
+      <div class="total">
+        <h2>To pay</h2>
+        <p class="price">$289/-</p>
+      </div>
+      <hr class="line">
+      <button class="promo-btn">
+        <span class="icon"><img src="Groceries Supermart Website/Approval.png" alt="approval"></span> Use Promo code
+      </button>
+    </div>
+
+    <div class="box payment-methods">
+      <div class="border">
+ <div class="option">
+        <label>
+          <input type="radio" name="payment" checked>
+          <span class="radio"></span>
+          Paypal
+          <img src="Groceries Supermart Website/Screenshot_2024-11-27_110140-removebg-preview 2.png" alt="PayPal" class="icon-img">
+        </label>
+      </div>
+      <hr class="line">
+      <div class="option">
+        <label>
+          <input type="radio" name="payment">
+          <span class="radio"></span>
+          Credit card
+          <img src="Groceries Supermart Website/Screenshot_2024-11-27_110227-removebg-preview 2.png" alt="Visa" class="icon-img">
+          <img src="Groceries Supermart Website/Screenshot_2024-11-27_110406-removebg-preview 2.png" alt="MasterCard" class="icon-img">
+          <img src="Groceries Supermart Website/Screenshot_2024-11-27_110354-removebg-preview 2.png" alt="Amex" class="icon-img">
+          <img src="Groceries Supermart Website/Screenshot_2024-11-27_110552-removebg-preview 2.png" alt="amex" class="icon-img">
+        </label>
+      </div>
+      </div>
+      <hr class="line">
+    </div>
+  </div>
+
+  <div class="confirm-btn-container">
+    <button class="confirm-btn" onclick="showSection('payconfirm')">Pay & Confirm</button>
+  </div>
+</section>
+
+  
+
+
+<section id="payconfirm">
+
+
+    <div class="arrange">
+    
+    <img src="Groceries Supermart Website/Group 51.png" alt="Success Tick" class="success-img">
+
+    
+    <h1><q>We've Got Your Order!</q></h2>
+
+  
+    <button onclick="showSection('final')" class="track-btn">Track Your order Now</button>
+  </div>
+
+
+
+</section>
+<section id="final">
+  
+
+
+  
+    <h2 class="centeralignment"> Secured CheckUp</h2>
+  
+    <div class="container">
+      <!-- Left Side -->
+      <div class="leftalign">
+        <img src="Groceries Supermart Website/Jersey Badam Flavoured Milk 190ML.png">.
+        <div class="product-named">Jersey Badam Flavoured Milk 190ML</div>
+        <p>Order placed...!❤️</p>
+      </div>
+  
+      <!-- Right Side -->
+      <div class="rightalign">
+        <h4>Product Description :</h4>
+        <p>
+          Indulge in the rich and creamy taste of Badamgir Badam Drink, made wit
+          This delicious drink is perfect for those looking for a healthy and freshing beverage.
+        </p>
+  
+        <h4>Key Features</h4>
+        <ul>
+          <li>- Made with high-quality almonds and natural ingredients</li>
+          <li>- Rich in nutrients and protein</li>
+          <li>- Delicious and creamy taste</li>
+          <li>- Perfect for a healthy and refreshing drink</li>
+        </ul>
+  
+        <h4>Product Details</h4>
+        <ul>
+          <li>- Product Name: Badamgir Badam Drink</li>
+          <li>- Quantity: 190ml</li>
+          <li>- Ingredients: Almonds, Milk, Sugar, Saffron, Cardamom</li>
+          <li>- Shelf Life: 6 months from manufacturing date</li>
+        </ul>
+  
+        <div class="meta">
+          <span>Quality No : 1</span>
+          
+        </div>
+      </div>
+    </div>
+    <div class="tracking-container">
+      <h2>Delivery by Tue 28 June</h2>
+      <div class="timeline">
+        <div class="step active">
+        <div class="circle"></div>
+         
+          <p class="status">Ordered</p>
+          <p class="date">15 June</p>
+        </div>
+        <div class="linesed"></div>
+        <div class="step">
+          <div class="circle"></div>
+          <p class="status">Shipped</p>
+          <p class="date">18 June</p>
+        </div>
+        <div class="linesed"></div>
+        <div class="step">
+          <div class="circle"></div>
+          <p class="status">Out of Delivery</p>
+          <p class="date">27 June</p>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+          <div class="circle"></div>
+          <p class="status">Delivery</p>
+          <p class="date">28 June</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Product Suggestion -->
+    <div class="explore-container">
+      <div class="explore-header">
+        <h2>Explore More</h2>
+        <h3 onclick="showSection('categories')">See More</h3>
+      </div>
+      <div class="product-grid">
+        <img src="Groceries Supermart Website/Drinks Juices J.png" alt="Juice">
+        <img src="Groceries Supermart Website/Nandini Goodlife Milk 1L.png" alt="Good Life Milk">
+        <img src="Groceries Supermart Website/Nestle Milkmaid Condensed Milk 380 g (Tin).png" alt="Milkmaid">
+        <img src="Groceries Supermart Website/Nandini Fresh Curd 500GM.png" alt="Curd">
+      </div>
+    </div>
+  
+  
+  
+</section>
+
+
+<section id="chickenboneless">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Chicken Boneless Breast Fillet</h3>
+  
+      <h6>Product Description</h6>
+      <p>
+        Indulge in the tender and juicy taste of our Premium Chicken Whole Skinless
+        Our chicken is sourced from trusted farms and processed with utmost care to
+        ensure a delicious and healthy eating experience.
+        With no added hormones or antibiotics, our chicken is perfect for griling
+         roasting, or cooking your favorite chicken recipes.
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>- Tender and juicy: Carefully selected and processed for tenderness.</li>
+        <li>- No added hormones or antibiotics: Healthier eating experience.</li>
+        <li>- Skinless: Leaner protein source.</li>
+        <li>- Perfect for grilling, roasting, or cooking: Versatile for recipes.</li>
+      </ul>
+  
+      <h6>Product Details</h6>
+      <ul>
+        <li>- Weight: 1.5 kg - 2 kg</li>
+        <li>- Packaging: Vacuum-packed to ensure freshness</li>
+        <li>- Shelf Life: 2-3 days from delivery date</li>
+      </ul>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Chicken Boneless Breast Fillet.png"
+      alt="Product" class="product-image">
+  
+      <h1>Chicken Boneless Breast Fillet
+        <span style="font-size:18px; color: #595959;;">250 GM</span>
+      </h1>
+      <div class="price">₹107.25</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="goatcurry">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Goat Currycut</h3>
+  
+      <h6>Product Description</h6>
+      <p>
+        Indulge in the rich flavours of our Goat curry,made with tender goat meat
+         cooked in a blend of aromatic spices.Our curry is a perfect blend of
+         traditional Indian flavours and modern convenience.
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-Made with tender Goat meat.</li>
+
+        <li>- Blended with aromatic spices.</li>
+        <li>- Traditional I ndian flavours with modern convenience.</li>
+        <li>- Ready-t0-eat,just heat and serve</li>
+      </ul>
+  
+      <h6>Product Details</h6>
+      <ul>
+        <li>- Weight: 200gm,500gm,1kg</li>
+        <li>- Packaging: Retort packaging for long shelf life</li>
+        <li>- Shelf Life: 12 months from manufacturing date</li>
+        <li>-Storage instructions:Store in a cool ,dry place</li>
+        <li>-Heating instructions:Heat in a microwave or on stovetop</li>
+      </ul>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Goat Currycut.png"
+      alt="Product" class="product-image">
+  
+      <h1>Premium Chicken Whole Skinless 
+        <span style="font-size:18px; color: #595959;;">250 GM</span>
+      </h1>
+      <div class="price">₹212.25</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="milk">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Fresh Milk</h3>
+  
+      <h6>Product Description</h6>
+    <p>Get the goodness of fresh milk deliever to your doorstep! our milk is sourced from local dairy farms and
+      is rich in nutrients like calcium,protein and vitamins.Perfect for cereal,t cooking or just a refreshing glass.
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-Fresh And Pure:Our milk is sourced from local diary farms and is free from any additives or preservatives</li>
+
+        <li>-Rich in Nutrients:Our milk is a good source of calcium,protein and vitamins </li>
+        <li>- Perfect for various uses:Use our milk for cereal ,cooking ,baking or just enjoy a refreshing glass.</li>
+        
+      </ul>
+  
+      <h6>Product Details</h6>
+      <ul>
+        <li>- Type:Whole milk,Low-fat milk ,slim milk</li>
+        <li>- Packaging:1 litre,500ml,250ml</li>
+        <li>- Shelf Life: 2-3 days from delievery date </li>
+        <li>-Storage instructions:Store in refrigerator at 0-4°c</li>
+        
+      </ul>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Nandini Goodlife Milk 500GM.png"
+      alt="Product" class="product-image">
+  
+      <h1>Nandhini Goodlife Milk 
+        <span style="font-size:18px; color: #595959;;">500 GM</span>
+      </h1>
+      <div class="price">₹29</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="paneer">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Fresh Milk</h3>
+  
+      <h6>Product Description</h6>
+    <p>Get the goodness of fresh milk deliever to your doorstep! our milk is sourced from local dairy far
+      is rich in nutrients like calcium,protein and vitamins.Perfect for cereal,t cooking or just a refre
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-Fresh And Pure:Our milk is sourced from local diary farms and is free from any additives or 
+
+        <li>-Rich in Nutrients:Our milk is a good source of calcium,protein and vitamins </li>
+        <li>- Perfect for various uses:Use our milk for cereal ,cooking ,baking or just enjoy a refreshin
+        
+      </ul>
+  
+      <h6>Product Details</h6>
+      <ul>
+        <li>- Type:Whole milk,Low-fat milk ,slim milk</li>
+        <li>- Packaging:1 litre,500ml,250ml</li>
+        <li>- Shelf Life: 2-3 days from delievery date </li>
+        <li>-Storage instructions:Store in refrigerator at 0-4°c</li>
+        
+      </ul>
+    </div>
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Nandini Goodlife Milk 500GM.png"
+      alt="Product" class="product-image">
+  
+      <h1>Nandhini Goodlife Milk 
+        <span style="font-size:18px; color: #595959;;">500 GM</span>
+      </h1>
+      <div class="price">₹29</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="uraddal">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Premium Dal</h3>
+  
+      <h6>Product Description</h6>
+    <p>Experience the authentic taste of India with our Premium Dal, carefully sourced from top suppliers
+      to ensure maximum quality and flavor. Our dal is rich in protein, fiber, and nutrients, making it a
+      nutritious addition to your meals.
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-High-quality protein source</li>
+        <li>-Rich in fiber and nutrients</li>
+        <li>-Carefully sourced from top suppliers</li>
+        <li>-Authentic Indian taste and flavor</li>
+      </ul>
+
+      <h6>Product Variants</h6>
+      <ul>
+        <li>Toor Dal: Yellow split pigeon peas</li>
+        <li>Moong Dal: Green gram split beans</li>
+        <li>Chana Dal: Split chickpeas</li>
+        <li>Masoor Dal: Red lentils</li>
+      </ul>
+  
+      <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/SPAR Select Urad Dal 500G.png" 
+      alt="Product" class="product-image">
+  
+      <h1>SPAR Select Urad Dal 500G
+        
+      </h1>
+      <div class="price">₹110</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+<section id="fibre">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Bhagyalakshmi Fried Gram</h3>
+  
+      <h6>Product Description</h6>
+    <p>Experience the authentic taste of India with our Premium Dal, carefully sourced from t
+      to ensure maximum quality and flavor. Our dal is rich in protein, fiber, and nutrients,
+      nutritious addition to your meals.
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-High-quality protein source</li>
+        <li>-Rich in fiber and nutrients</li>
+        <li>-Carefully sourced from top suppliers</li>
+        <li>-Authentic Indian taste and flavor</li>
+      </ul>
+
+      <h6>Product Variants</h6>
+      <ul>
+        <li>Toor Dal: Yellow split pigeon peas</li>
+        <li>Moong Dal: Green gram split beans</li>
+        <li>Chana Dal: Split chickpeas</li>
+        <li>Masoor Dal: Red lentils</li>
+      </ul>
+  
+      <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Bhagyalakshmi Fried Gram-P.png" 
+      alt="Product" class="product-image">
+  
+      <h1>Bhagyalakshmi Fried Gram 250 GM
+        
+      </h1>
+      <div class="price">₹40</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+
+
+<section id="moong">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Popular Moong Dal</h3>
+  
+      <h6>Product Description</h6>
+    <p>Experience the authentic taste of India with our Premium Dal, carefully sourced from t
+      to ensure maximum quality and flavor. Our dal is rich in protein, fiber, and nutrients,
+      nutritious addition to your meals.
+
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+        <li>-High-quality protein source</li>
+        <li>-Rich in fiber and nutrients</li>
+        <li>-Carefully sourced from top suppliers</li>
+        <li>-Authentic Indian taste and flavor</li>
+      </ul>
+
+      <h6>Product Variants</h6>
+      <ul>
+        <li>Toor Dal: Yellow split pigeon peas</li>
+        <li>Moong Dal: Green gram split beans</li>
+        <li>Chana Dal: Split chickpeas</li>
+        <li>Masoor Dal: Red lentils</li>
+      </ul>
+  
+      <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Screenshot_2025-03-31_150052-removebg-preview 1.png" 
+      alt="Product" class="product-image">
+  
+      <h1>Popular Moond Dal 1 KG
+        
+      </h1>
+      <div class="price">₹159</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+<section id="appleroyal">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Apple Royalgala</h3>
+  
+      <h6>Product Description</h6>
+    <p>
+      Indulge in the sweet and crunchy goodness of our Royal Gala Apples,
+       carefully hand-picked from select orchards to ensure maximum flavor and freshness.
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+      <li>  Sweet and crunchy texture</li>
+
+<li>Juicy and flavorful</li>
+
+<li>Carefully hand-picked from select orchards</li>
+
+<li>Perfect snack for any time of day.</li>
+      </ul>
+
+      
+      
+      
+      
+      
+      
+      
+  
+      <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+        <li>Shelf Life: 7-10 days from delivery date</li>
+        <li>Storage Instructions: Store in refrigerator at 0-4°C
+
+        </li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Apple Royalgala.png" 
+      alt="Product" class="product-image">
+  
+      <h1>Apple Royalgala 500GM
+        
+      </h1>
+      <div class="price">₹124.5</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="appleshimla">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Apple Shimla</h3>
+  
+      <h6>Product Description</h6>
+    <p>
+      Indulge in the sweet and crunchy goodness of our Royal Gala Apples,
+       carefully hand-picked from select orchards to ensure maximum flavor and freshn
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+      <li>  Sweet and crunchy texture</li>
+
+<li>Juicy and flavorful</li>
+
+<li>Carefully hand-picked from select orchards</li>
+
+<li>Perfect snack for any time of day.</li>
+      </ul>
+
+      
+         <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+        <li>Shelf Life: 7-10 days from delivery date</li>
+        <li>Storage Instructions: Store in refrigerator at 0-4°C
+
+        </li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Apple Shimla.png" 
+      alt="Product" class="product-image">
+  
+      <h1>Apple Shimla 500GM
+        
+      </h1>
+      <div class="price">₹114.5</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+
+<section id="banana">
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left-column">
+      <h3>Banana Robusta</h3>
+  
+      <h6>Product Description</h6>
+    <p>
+    Enjoy the delicious taste and numerous health benefits of our Robusta Bananas,
+       carefully hand-picked from select orchards to ensure maximum flavor and freshn
+      </p>
+  
+      <h6>Key Features</h6>
+      <ul>
+      <li>  Sweet and creamy taste</li>
+
+<li>High in potassium,vitamins and minerals</li>
+
+<li>Carefully hand-picked from select plantations</li>
+
+<li>Perfect snack for any time of day.</li>
+      </ul>
+
+      
+      
+      
+      
+      
+      
+      
+  
+      <h6>Product Details</h6>
+     <ul>
+        <li>Weight: 500gm, 1kg, 2kg, 5kg</li>
+        <li>Packaging: Food-grade packaging to ensure freshness</li>
+        <li>Shelf Life: 3-5 days from delivery date</li>
+        <li>Storage Instructions: Store in refrigerator at 0-4°C
+
+        </li>
+      </ul>
+    </div>
+     
+     
+
+  
+    <!-- Right Side -->
+    <div class="right-column">
+      <img src="Groceries Supermart Website/Banana Robusta.png" 
+      alt="Product" class="product-image">
+  
+      <h1>Banana Robusta</h1>
+        
+      
+      <div class="price">₹27.5</div>
+  
+      <div class="meta">
+        <span>Quality No: <strong>1</strong></span>
+        <span class="stock">❤️ In Stock: <strong>13</strong></span>
+      </div>
+  
+      <div class="buttons">
+        <button class="add-btn">Add to Cart</button>
+        <button class="buy-btn" onclick="showSection('buynow')"  >Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+<section id="categories">
+
+
+
+  <div class="categories-container">  
+  <div class="categories">   
+ <span><img src="Groceries Supermart Website/category-image.png" alt="categories"></span>
+ <span>Grocery</span>    
+  </div>    
+     
+  <div class="categories">   
+    <span><img src="Groceries Supermart Website/category-image J.png" alt="categories"></span>
+    <span>Fruits & Vegetables</span>    
+     </div>        
+     
+     
+     <div class="categories">   
+      <span><img src="Groceries Supermart Website/category-image K.png" alt="categories"></span>
+      <span>Fish & Meat</span>    
+       </div>      
+     
+       <div class="categories">   
+        <span><img src="Groceries Supermart Website/J.png" alt="categories"></span>
+        <span>Packaged food</span>    
+         </div>    
+
+         <div class="categories">   
+          <span><img src="Groceries Supermart Website/category-image Q.png" alt="categories"></span>
+          <span>Dairy & Beverages</span>    
+           </div>       
+  </div>
+
+
+  <div class="sections-header">
+    <span> <img src="Groceries Supermart Website/category-image.png"></span>
+  <span><h2>Grocery</h2></span>
+  </div>
+
+  <div class="categorys-grid">
+
+    <div class="categorys-item">
+      <img src="Groceries Supermart Website/Group 251 J.png" alt="rice">
+      <span>Rice & Rice products</span>
+    </div>
+
+
+    
+      <div class="categorys-item">
+        <img src="Groceries Supermart Website/Group 252.png" alt="oil">
+        <span>Cooking oil</span>
+      </div>
+
+        <div class="categorys-item">
+          <img src="Groceries Supermart Website/Group 253 N.png" alt="ghee">
+          <span>Ghee & Vanaspathi</span>
+        </div>
+
+
+        
+          <div class="categorys-item">
+            <img src="Groceries Supermart Website/Group 254.png" alt="rice">
+            <span>Salt/Sugar/Jaggery</span>
+          </div>
+
+
+          
+            <div class="categorys-item">
+              <img src="Groceries Supermart Website/Group 255 J.png" alt="flour">
+              <span>Flours</span>
+            </div>
+
+            
+              <div class="categorys-item">
+                <img src="Groceries Supermart Website/Group 256.png" alt="masala">
+                <span>Masala & Spices</span>
+              </div>
+
+            </div>
+
+
+            <div class="sections-header">
+              <span> <img src="Groceries Supermart Website/category-image J.png"></span>
+            <span><h2>Fruits & Vegetables </h2></span>
+            </div>
+          
+            <div class="categorys-grid">
+          
+              <div class="categorys-item">
+                <img src="Groceries Supermart Website/Group 257.png" alt="vegetables">
+                <span>Fresh Vegetables</span>
+              </div>
+          
+          
+              
+                <div class="categorys-item">
+                  <img src="Groceries Supermart Website/Group 258 J.png" alt="fruits">
+                  <span>Fresh Fruits</span>
+                </div>
+
+            </div>
+
+
+            <div class="sections-header">
+              <span> <img src="Groceries Supermart Website/category-image K.png"></span>
+            <span><h2>Fish & Meat</h2></span>
+            </div>
+          
+            <div class="categorys-grid">
+          
+              <div class="categorys-item">
+                <img src="Groceries Supermart Website/Group 259 J.png" alt="fish">
+                <span>Chicken whole & cuts</span>
+              </div>
+          
+          
+              
+                <div class="categorys-item">
+                  <img src="Groceries Supermart Website/Group 260.png" alt="fish">
+                  <span>Meat</span>
+                </div>
+          
+                  <div class="categorys-item">
+                    <img src="Groceries Supermart Website/Group 261.png" alt="fish">
+                    <span>Fish & Seafood</span>
+                  </div>
+          
+          
+                  
+                    <div class="categorys-item">
+                      <img src="Groceries Supermart Website/Group 262.png" alt="fish">
+                      <span>Delicatessan</span>
+                    </div>
+            </div>
+
+
+                    
+                      <div class="sections-header">
+                        <img src="Groceries Supermart Website/J.png" alt="pack">
+                        <span>Packaged food</span>
+                      </div>
+
+                      <div class="categorys-grid">
+                        <div class="categorys-item">
+                          <img src="Groceries Supermart Website/Group 263 J.png" alt="cookies">
+                          <span>Biscuits & Cookies</span>
+                        </div>
+
+                          <div class="categorys-item">
+                            <img src="Groceries Supermart Website/Group 264 I.png" alt="cereals">
+                            <span>Breakfast cereals</span>
+                          </div>
+                          
+                            <div class="categorys-item">
+                              <img src="Groceries Supermart Website/Group 265K.png" alt="candies">
+                              <span>Chocolates & candies</span>
+                            </div>
+                            
+                              <div class="categorys-item">
+                                <img src="Groceries Supermart Website/Group 266.png" alt="sauce">
+                                <span>Ketchup & sauces</span>
+                              </div>
+                              
+                                <div class="categorys-item">
+                                  <img src="Groceries Supermart Website/Group 268.png" alt="pasta">
+                                  <span>Pasta & Noodles</span>
+                                </div>
+
+
+                                <div class="categorys-item">
+                                  <img src="Groceries Supermart Website/Group 266.png" alt="jam">
+                                  <span>Jams & spreads</span>
+                   </div>
+                      </div>
+
+                              <div class="sections-header">
+                                <img src="Groceries Supermart Website/category-image Q.png" alt="pack">
+                                <span>Dairy & Beverages</span>
+                              </div>
+                              <div class="categorys-grid">
+                                <div class="categorys-item">
+                                  <img src="Groceries Supermart Website/Group 268.png" alt="dairy">
+                                  <span>Dairy</span>
+                                </div>
+                                  <div class="categorys-item">
+                                    <img src="Groceries Supermart Website/Group 269.png" alt="bever">
+                                    <span>Beverages</span>
+                                  </div>
+                                  
+                                    <div class="categorys-item">
+                                      <img src="Groceries Supermart Website/Group 270.png" alt="poultry">
+                                      <span>poultry</span>
+                                    </div>
+                                    
+                                      <div class="categorys-item">
+                                        <img src="Groceries Supermart Website/Group 271.png" alt="breads">
+                                        <span>Breads</span>
+                                      </div>
+                                      
+
+
+</section>
+
+
+
+<section id="deals">
+
+      
+
+
+      <div class="banner">
+        <div class="sale-text">
+          <p>FLAT 20% OFF</p>
+          <h1><span class="highlight">SUPER</span>SALE</h1>
+          <p>Limited Time Offer</p>
+          <a class="shop-btn">SHOP NOW</a>
+        </div>
+      </div>
+
+<div class="blackheader">
+  <h1>Top Selling 25% OFF</h1>
+</div>
+
+<div class="product-container">
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Premium Chicken Whole Skinless 1.png" alt="chicken">
+    <div class="product-name">Premium Chicken Whole Skinless</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹74.75</span>
+    <span class="product-options">4 Options</span>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Chicken Boneless Breast Fillet.png" alt="chicken">
+    <div class="product-name">Chicken Boneless Breast Fillet</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹107.25</span>
+    <span class="product-options">4 Options</span>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Goat Currycut.png" alt="goatcurry">
+    <div class="product-name">Goat Currycut</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹212.25</span>
+    <span class="product-options">4 Options</span>
+  </div>
+  </div>
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Chicken Liver Cut Pieces U.png" alt="chicken">
+    <div class="product-name">Chicken Liver Cut Pieces</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹249.75</span>
+    <span class="product-options">4 Options</span>
+  </div>
+  </div>
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Chicken Boneless Breast Fillet.png" alt="chicken">
+    <div class="product-name">Chicken Dressed With Skin Whole</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹59.75</span>
+    <span class="product-options">4 Options</span>
+    </div>
+  </div>
+  <div class="product-card">
+    <img src="Groceries Supermart Website/Premium Chicken Drumstick Skinless U.png" alt="chicken">
+    <div class="product-name">Premium Chicken Drumstick Skinless</div>
+    <div class="product-weight">250 GM</div>
+    <div class="align">
+    <span class="product-price">₹107.25</span>
+    <span class="product-options">4 Options</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="blackheader">
+  <h1>Best deals up to 20% OFF</h1>
+</div>
+
+<div class="product-container">
+  <div class="product-card">
+    <img class="imgalign"   src="Groceries Supermart Website/Jersey Badam Flavoured Milk 190ML.png" alt="jersey">
+    <div class="product-name">Jersey Badam Flavoured Milk 190ML</div>
+    <div class="product-weight">190 ML</div>
+    <div class="align">
+    <span class="product-price">₹40</span>
+    <span class="product-option">+</span>
+    </div>
+  </div>
+    <div class="product-card" onclick="showSection('milk')">
+      <div class="offer-tag">3% Off</div>
+      <img class="imgalign" src="Groceries Supermart Website/Nandini Goodlife Milk 500GM.png" alt="milk">
+      <div class="product-name">Nandini Goodlife Milk 500GM </div>
+      <div class="product-weight">500 GM</div>
+      <div class="delete"><del>₹30</del></div>
+      <div class="align">
+      <span class="product-price">₹29</span>
+      <span class="product-option">+</span>
+      </div>
+    </div>
+      <div class="product-card">
+        <img src="Groceries Supermart Website/Nandini Goodlife Milk 180ML.png" alt="milk">
+        <div class="product-name">Nandini Good Life Milk 180ML</div>
+        <div class="product-weight">180 ML</div>
+        <div class="align">
+        <span class="product-price">₹14</span>
+        <span class="product-option">+</span>
+        </div>
+      </div>
+        <div class="product-card">
+          <img src="Groceries Supermart Website/Nandini Slim Uht Milk 1L.png" alt="milk">
+          <div class="product-name">Nandini Slim Uht Milk 1L </div>
+          <div class="product-weight">1 L</div>
+          <div class="align">
+          <span class="product-price">₹71</span>
+          <span class="product-option">+</span>
+          </div>
+        </div>
+          <div class="product-card" onclick="showSection('paneer')">
+            <img src="Groceries Supermart Website/Milky Mist Paneer-P.png" alt="paneer">
+            <div class="product-name">Milky Mist Paneer</div>
+            <div class="product-weight">200 GMc</div>
+            <div class="align">
+            <span class="product-price">₹128</span>
+            <span class="product-options">2 0ptions</span>
+            </div>
+          </div>
+            <div class="product-card">
+              <img src="Groceries Supermart Website/Heritage Premium Badam Milk With Badam Bits 180ML.png" alt="badam">
+              <div class="product-name">Heritage Premium Badam Milk with Bada</div>
+              <div class="product-weight">180 ML</div>
+              <div class="align">
+              <span class="product-price">₹35</span>
+              <span class="product-option">+</span>
+              </div>
+            </div>
+  </div>
+
+  <div class="blackheader">
+    <h1>Trending Items</h1>
+  </div>
+  <div class="product-container">
+    <div class="product-carded" onclick="showSection('uraddal')">
+      <img class="imgalign"   src="Groceries Supermart Website/SPAR Select Urad Dal 500G.png" alt="dal">
+      <div class="product-name">SPAR select Urad Dal 500G</div>
+      <div class="product-weight">500 GM</div>
+      <div class="align">
+      <span class="product-price">₹110</span>
+      <span class="product-option">+</span>
+      </div>
+    </div>
+      <div class="product-carded" onclick="showSection('fried')">
+        <img class="imgalign" src="Groceries Supermart Website/Bhagyalakshmi Fried Gram-P.png" alt=fried>
+        <div class="product-name">Bhagyalakshmi Fried Gram </div>
+        <div class="product-weight">250 GM</div>
+        
+        <div class="align">
+        <span class="product-price">₹29</span>
+        <span class="product-options">2 options</span>
+        </div>
+      </div>
+        <div class="product-carded" onclick="showSection('moong')">
+          <img src="Groceries Supermart Website/Screenshot_2025-03-31_150052-removebg-preview 1.png" alt="Moong">
+          <div class="product-name">Popular Moong Dal</div>
+          <div class="product-weight">1KG</div>
+          <div class="delete"><del>₹190</del></div>
+          <div class="align">
+          <span class="product-price">₹159</span>
+          <span class="product-option">+</span>
+          </div>
+        </div>
+          <div class="product-carded">
+            <img src="Groceries Supermart Website/Screenshot_2025-03-31_150157-removebg-preview 1.png">
+            <div class="product-name">SPAR select spotted double beans</div>
+            <div class="product-weight">200 GM</div>
+            <div class="align">
+            <span class="product-price">₹150</span>
+            <span class="product-options">2 options</span>
+            </div>
+          </div>
+            <div class="product-carded">
+              <img src="Groceries Supermart Website/Loose Bestprice Fried Gram.png" alt="fried">
+              <div class="product-name">Loose Bestprice Fried Gram</div>
+              <div class="product-weight">250 GM</div>
+              <div class="align">
+              <span class="product-price">₹42.25</span>
+              <span class="product-options">3 0ptions</span>
+              </div>
+            </div>
+              <div class="product-carded">
+                 <div class="offer-tag">14%off</div>
+                <img src="Groceries Supermart Website/Popular Moong Dal 2KG.png" alt="dal">
+                <div class="product-name">Popular Moong Dal 2KG</div>
+                <div class="product-weight">2 KG</div>
+                <div class="delete"><del>₹299</del></div>
+                <div class="align">
+                <span class="product-price">₹258</span>
+                <span class="product-option">+</span>
+                </div>
+              </div>
+    </div>
+  
+
+</section>
+
+
+
+<button class="restart-btn" onclick="showSection('home');">Restart<Span style="color:#2E4053"> R</Span></button>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-column footer-logo-column">
+      <div class="footer-logo">
+        <img src="Groceries Supermart Website/Ellipse 1.png" alt="GroceryHub">
+        <h3>GroceryHub</h3>
+      </div>
+      <p>
+        GroceryHub brings its customers low prices every day. We offer a wide choice covering fresh & packaged food, grains, pulses, dairy, frozen, plastics, utensils, crockery, travel, stationery, & more. SPAR has 13,900 stores in 48 countries. In India, SPAR has 23 stores across 8 cities.
+      </p>
+      <p><img src="Groceries Supermart Website/Mail.png"> business@groceryhub.com</p>
+      <p><img src="Groceries Supermart Website/Internet.png"> www.Grocery.in</p>
+
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <a href="#">Your Account</a>
+      <a href="#">FAQS</a>
+      <a href="#">Store List</a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-column">
+      <h4>Let Us Help You</h4>
+      <a href="#">Help & Support</a>
+      <a href="#">Share Feedback</a>
+      <a href="#">Call Us</a>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <a href="#">About Us</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Return & Refund</a>
+    </div>
+
+    <div class="social-connect">
+      <h4>Connect With Us</h4>
+      <div class="social-icons">
+        <img src="Groceries Supermart Website/Item.png" alt="Facebook">
+        <img src="Groceries Supermart Website/Item H.png" alt="Twitter">
+        <img src="Groceries Supermart Website/Item P.png" alt="Instagram">
+        <img src="Groceries Supermart Website/Item 9.png" alt="LinkedIn">
+      </div>
+      <div class="store-icons">
+        <img src="Groceries Supermart Website/Link → app-store-image.png" alt="App Store">
+        <img src="Groceries Supermart Website/Link → paly-store-image.png" alt="Google Play">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    GroceryHub | All rights Reserved
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
