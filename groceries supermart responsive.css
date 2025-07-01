@@ -265,14 +265,14 @@ grid-template-columns: repeat(3,1fr);
     
       
     }
-  .product-card img{
+  .product-card img,.product-carded img{
 width: 50%;
 height: 50%;
   }
     .product-name,
     .product-weight,
     .product-price {
-      font-size: 12px;
+      font-size: 16px;
     }
 .category-grid span {
 font-size: 24px;

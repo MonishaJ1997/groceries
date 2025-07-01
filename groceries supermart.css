@@ -1018,7 +1018,7 @@ width: 150px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/*  Close button */
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -1028,7 +1028,7 @@ width: 150px;
   font-weight: bold;
 }
 
-/*  Button styles */
+
 .change-address {
   background-color: #8BC34A;
   color: white;
@@ -1038,10 +1038,8 @@ width: 150px;
   border-radius: 10px;
   margin: 20px 0;
   font-size: 16px;
-  width: 100%;
-}
+  width:100%}
 
-/*  Separator text with lines */
 .separator {
   display: flex;
   align-items: center;
@@ -1261,89 +1259,6 @@ border-radius: 10px;
 
  
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  .arrange{

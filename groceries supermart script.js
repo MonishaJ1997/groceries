@@ -61,6 +61,9 @@ window.onload = function () {
 };
 
    
+
+
+//show login
 const loginBtn = document.getElementById("loginBtn");
 const loginOverlay = document.getElementById("loginOverlay");
 const overlayContent = document.getElementById("overlayContent");
@@ -89,39 +92,40 @@ document.getElementById("loginOverlay").addEventListener("click", function (e) {
   
   
 
+
+//show location
   const locationBtn = document.getElementById("locationBtn");
   const locationOverlay = document.getElementById("locationOverlay");
   const locationContent = document.getElementById("locationContent");
 
-  // Show overlay
+  
   locationBtn.addEventListener("click", () => {
     locationOverlay.style.display = "flex";
   });
 
-  // Close overlay when clicking outside
+  
   locationOverlay.addEventListener("click", (e) => {
     if (!locationContent.contains(e.target)) {
       locationOverlay.style.display = "none";
     }
   });
 
-  // Optional: Close using the "X"
+  
   function closeOverlay() {
     locationOverlay.style.display = "none";
   }
 
-
+//show account
 
   const accountBtn = document.getElementById("accountBtn");
   const accountOverlay = document.getElementById("accountOverlay");
   const accountContent = document.getElementById("accountContent");
 
-  // Show overlay
   accountBtn.addEventListener("click", () => {
     accountOverlay.style.display = "block";
   });
 
-  // Close when clicking outside
+
   document.addEventListener("click", function(e) {
     if (
       !accountOverlay.contains(e.target) &&
@@ -131,7 +135,7 @@ document.getElementById("loginOverlay").addEventListener("click", function (e) {
     }
   });
 
-  // Close with "X"
+  
   function closeAccountOverlay() {
     accountOverlay.style.display = "none";
   }
@@ -158,11 +162,11 @@ document.getElementById("loginOverlay").addEventListener("click", function (e) {
  
  
  
-
+//use multiple overlay
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Show overlay on button click
+    
     document.querySelectorAll(".overlay-btn").forEach(button => {
       button.addEventListener("click", function () {
         const targetId = this.getAttribute("data-overlay");
@@ -171,7 +175,7 @@ document.getElementById("loginOverlay").addEventListener("click", function (e) {
       });
     });
 
-    // Close overlay on outside click or X click
+  
     document.querySelectorAll(".overlay-box").forEach(overlay => {
       const content = overlay.querySelector(".overlay-content");
 
@@ -192,7 +196,7 @@ document.getElementById("loginOverlay").addEventListener("click", function (e) {
 
 
 
-
+//cart overlay
   
   document.addEventListener("DOMContentLoaded", function () {
     const cartBtn = document.getElementById("cartBtn");
